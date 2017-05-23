@@ -1,14 +1,15 @@
 var express = require('express');
 var app = express()
 var PORT = process.env.PORT ||	3000;
-import {  getIP, getOS, getLang } from './getInfo';
+
+var getInfo = require('./getInfo')
 
 app.get('/api/whoami', function (req,res) {
     var json =     {
         
-     ipaddress : getIP(req.connection.remoteAddress),
-     language : getLang(req.headers['accept-language']),
-     software : getOS(req.headers['user-agent']),
+     ipaddress : getInfo.getIP(req.connection.remoteAddress),
+     language : getInfo.getLang(req.headers['accept-language']),
+     software : getInfo.getOS(req.headers['user-agent']),
     
     };
     
