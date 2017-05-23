@@ -5,7 +5,9 @@ var port = process.env.PORT ||	3000;
 var getInfo = require('./getInfo')
 
 app.get('/api/whoami', function (req,res) {
-    var json =     {
+    
+    res.send('hello')
+    /*var json =     {
         
      ipaddress : getInfo.getIP(req.connection.remoteAddress),
      language : getInfo.getLang(req.headers['accept-language']),
@@ -14,6 +16,8 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
+    */
+    
     
 })
 
