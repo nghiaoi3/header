@@ -15,7 +15,7 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
-    
+    res.send(req.connection.remoteAddress)
     
     
 })
