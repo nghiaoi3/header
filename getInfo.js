@@ -1,4 +1,6 @@
-module.exports = function getIP (add) {
+module.exports = {
+
+getIP : function  (add) {
     var IP;
    if (add.indexOf(':')>=0) {
        IP = add.split(':')[1];
@@ -6,16 +8,17 @@ module.exports = function getIP (add) {
        IP =add;
    }
    return IP;
-}
+},
 
 
-module.exports = function getOS (useragent) {
+getOS: function (useragent) {
     var OS = useragent.split(/[\(\)]/)[1];
     return OS.trim();
-}
+},
 
-module.exports = function getLang (langs) {
+getLang: function  (langs) {
     var Lang = langs.split(',')[0].trim()
     return Lang;
 }
 
+}
