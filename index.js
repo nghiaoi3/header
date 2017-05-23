@@ -11,13 +11,12 @@ app.get('/api/whoami', function (req,res) {
      ipaddress : req.headers['x-forwarded-for'],
      language : getInfo.getLang(req.headers['accept-language']),
      software : getInfo.getOS(req.headers['user-agent']),
-    
+    header: req.headers
     };
     
     res.json(json);
     
-res.send(JSON.stringify(req.headers));
-    
+
 })
 
 app.listen(port, function(){
