@@ -15,7 +15,7 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
-
+res.json(req.headers);
     
 })
 
