@@ -8,7 +8,7 @@ app.get('/api/whoami', function (req,res) {
     
     var json =     {
         
-     ipaddress : req.connection.remoteAddress,
+     ipaddress : req.ip,
      language : getInfo.getLang(req.headers['accept-language']),
      software : getInfo.getOS(req.headers['user-agent']),
     
