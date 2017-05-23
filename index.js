@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express()
-var PORT = process.env.PORT ||	3000;
+var port = process.env.PORT ||	3000;
 
 var getInfo = require('./getInfo')
 
@@ -14,4 +14,9 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
+    
+})
+
+app.listen(port, function(){
+    console.log('server is listening ' +port)
 })
