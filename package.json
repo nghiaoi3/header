@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/nghiaoi3/header/issues"
   },
-  "homepage": "https://github.com/nghiaoi3/header#readme"
+  "homepage": "https://github.com/nghiaoi3/header#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
