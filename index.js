@@ -15,11 +15,11 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
-    res.send(req.connection.remoteAddress)
-    
+
     
 })
 
-app.listen(port, function(){
+app.listen(port, function(req,res){
     console.log('server is listening ' +port)
+    console.log(req.connection.remoteAddress)
 })
