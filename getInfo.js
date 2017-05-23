@@ -3,7 +3,7 @@ module.exports = {
 getIP : function  (add) {
     var IP;
    if (add.indexOf(':')>=0) {
-       IP = add.split(':')[1];
+       IP = add.split(':').reverse()[0];
    } else {
        IP =add;
    }
