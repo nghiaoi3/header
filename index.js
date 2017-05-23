@@ -7,7 +7,7 @@ var getInfo = require('./getInfo')
 app.get('/api/whoami', function (req,res) {
     
     res.send('hello')
-    /*var json =     {
+    var json =     {
         
      ipaddress : getInfo.getIP(req.connection.remoteAddress),
      language : getInfo.getLang(req.headers['accept-language']),
@@ -16,7 +16,7 @@ app.get('/api/whoami', function (req,res) {
     };
     
     res.json(json);
-    */
+    
     
     
 })
